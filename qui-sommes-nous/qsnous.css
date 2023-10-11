@@ -7,10 +7,7 @@
 #header {
     position: fixed;
     width: 100%;
-    /* border: 1px solid rgb(0, 0, 0); */
-    background-color: white;
-    z-index: 100;
-    box-shadow: 0 2px 12px #06114d8b;
+    border: 1px solid rgb(0, 0, 0);
 }
 .header-top {
     background-color: #F6F6F6;
@@ -172,8 +169,7 @@
 /* Fin de la section hrgb(87, 0, 0)£*/
 
 /* debut css contenu */
-/* css banniere */
-.mlegal-banniere{
+.qsnous-banniere{
     background-image: url(https://img.freepik.com/photos-gratuite/prise-vue-grand-angle-marteau-documents-proces-surface-bois_181624-57259.jpg?size=626&ext=jpg&ga=GA1.2.12207566.1692912950&semt=ais);
     background-repeat: no-repeat;
     background-position: center;
@@ -184,7 +180,7 @@
     flex-wrap: wrap;
     place-content: center;
 }
-.mlegal-banniere::before{
+.qsnous-banniere::before{
     content: '';
     background-color: #06114d8b;
     height: 500px;
@@ -192,14 +188,14 @@
     position: absolute;
     z-index: 1;
 }
-.mlegal-banniere h1{
+.qsnous-banniere h1{
     color: white;
     font-weight: bold;
     font-size: 80px;
     position: relative;
     z-index: 2;
 }
-.mlegal-banniere p{
+.qsnous-banniere p{
     color: white;
     font-weight: bold;
     /* font-size: 80px; */
@@ -207,25 +203,9 @@
     z-index: 2;
     top: 330px;
 }
-.mlegal-banniere p a{
+.qsnous-banniere p a{
     color: white;
 }
-/* fin css banniere */
-.mlegal-content{
-    margin: 60px 0;
-}
-.mlegal-content1{
-    display: flex;
-    flex-direction: column;
-    justify-content: justify;
-    text-align: center;
-    align-items: center;
-    margin: 0 auto;
-}
-.mlegal-content1 h2{
-    color: var(--rouge);
-}
-
 /* fin css contenu */
 
 /* css footer */

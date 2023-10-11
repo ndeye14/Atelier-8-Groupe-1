@@ -7,7 +7,10 @@
 #header {
     position: fixed;
     width: 100%;
-    border: 1px solid rgb(0, 0, 0);
+    /* border: 1px solid rgb(0, 0, 0); */
+    background-color: white;
+    z-index: 100;
+    box-shadow: 0 2px 12px #06114d8b;
 }
 .header-top {
     background-color: #F6F6F6;
@@ -208,7 +211,7 @@
 .alternance-banniere-carte{
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .alternance-banniere-carte-item{
     background-color: #f6f6f6;
@@ -311,19 +314,35 @@
 .alternance-content-two h3{
     color: var(--rouge);
     font-size: 30px;
-    margin-top: 20px;
-    border-radius: 1px solid black;
+    margin: 60px;
 }
 .alternance-content-two{
     text-align: center;
 }
-.alternance-content-two-card{
+.alternance-card-item{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.alternance-content-two-badge{
+    position: absolute;
+    background-color: var(--bleu);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    left: 0;
+    top: 30px;
 }
 .btn{
     background-color: var(--rouge);
     border: none;
     font-weight: bold;
+}
+.alternance-content-three h3{
+    text-align: center;
+    color: var(--rouge);
+    margin: 60px;
 }
 .alternance-content-three-item{
     display: flex;
@@ -345,6 +364,112 @@
     color: var(--rouge);
     text-decoration:underline;
 }
+/* debut média queries */
+@media screen and (width <= 900px) {
+    .alternance-banniere h1{
+        font-size: 60px;
+    }
+    .alternance-banniere-carte{
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 30px;
+        margin-bottom: 10px;
+        line-height: 23px;
+        /* background-color: #CE0033; */
+    }
+    .alternance-banniere-carte-item {
+        font-size: 20px;
+        width: 250px;
+        }
+    .alternance-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* gap: 10px;
+        margin: 20px 15px; */
+    }
+    .alternance-content-right-button button{
+        justify-content: center;
+        text-align: center;
+        padding: 5px;
+    }
+    #alternance-content-two-carte{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .alternance-content-three p:nth-child(2){
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .alternance-content-three {
+        text-align: center;
+    }
+    
+}
+@media screen and (width <= 390px) {
+    .alternance-banniere h1{
+        font-size: 30px;
+    }
+    .alternance-banniere-carte{
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 30px;
+        margin-bottom: 10px;
+        line-height: 23px;
+        /* background-color: #CE0033; */
+    }
+    .alternance-banniere-carte-item {
+        font-size: 20px;
+        width: 250px;
+        }
+    .alternance-titre h2 , .alternance-content-left h3{
+        font-size: 18px;
+    }
+    .alternance-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* gap: 10px;
+        margin: 20px 15px; */
+    }
+    .alternance-content-left{
+        height: 350px;
+        text-align: center;
+        justify-content: justify;
+    }
+    .alternance-content-right{
+        height: 500px;
+    }
+    /* .alternance-content-left button{
+        padding: 5px 100px;
+        text-align: left !important;
+        font-size: 10px;
+        background-color: black;
+    } */
+    .alternance-content-right-button button{
+        justify-content: center;
+        text-align: center;
+        padding: 5px;
+    }
+    .alternance-content-two-item{
+        width: 50%;
+    }
+    #alternance-content-two-carte h5{
+        font-size: 10px;
+    }
+    #alternance-content-two-carte p{
+        font-size: 5px;
+    }
+    .alternance-content-three p:nth-child(2){
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .alternance-content-three {
+        text-align: center;
+    }
+    
+}
+/* fin média queries */
 /* --fin css contenu-- */
 
 
