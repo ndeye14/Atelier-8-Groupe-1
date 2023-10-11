@@ -225,6 +225,17 @@
 .mlegal-content1 h2{
     color: var(--rouge);
 }
+@media screen and (width <= 900px) {
+    .mlegal-content1{
+        justify-content: center;
+        /* color: #CE0033; */
+    }
+}
+@media screen and (width <= 390px) {
+    .mlegal-banniere h1{
+        font-size: 50px;
+    }
+}
 
 /* fin css contenu */
 
