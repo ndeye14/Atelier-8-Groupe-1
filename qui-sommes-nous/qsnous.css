@@ -7,7 +7,9 @@
 #header {
     position: fixed;
     width: 100%;
-    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+    z-index: 100;
+    box-shadow: 0 2px 12px #06114d8b;
 }
 .header-top {
     background-color: #F6F6F6;
@@ -170,7 +172,7 @@
 
 /* debut css contenu */
 .qsnous-banniere{
-    background-image: url(https://img.freepik.com/photos-gratuite/prise-vue-grand-angle-marteau-documents-proces-surface-bois_181624-57259.jpg?size=626&ext=jpg&ga=GA1.2.12207566.1692912950&semt=ais);
+    background-image: url(https://img.freepik.com/photos-gratuite/gens-qui-se-rencontrent-pour-discuter-situation-marketing_1421-564.jpg?size=626&ext=jpg&ga=GA1.2.12207566.1692912950&semt=sph);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -206,8 +208,82 @@
 .qsnous-banniere p a{
     color: white;
 }
-/* fin css contenu */
+.qsnous-content {
+    margin-top: 50px;
+}
+.qsnous-content h4, .qsnous-content-1 h4, .qsnous-content-2 h4, .qsnous-content-3 h4{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--rouge);
+}
+.qsnous-content hr, .qsnous-content-1 hr, .qsnous-content-2 hr, .qsnous-content-3 hr{
+    color: black;
+    width: 10%;
+    size:  25px;
+}
+.qsnous-content p{
+    background-color: #f6f6f6;
+    padding: 20px 15px;
+    border-left: 3px solid var(--rouge);
+}
+.qsnous-content-1{
+    margin: 70px;
+    /* width: 80%; */
+    border: 1px solid rgb(0, 0, 0);
 
+}
+.qsnous-filter{
+    margin: 50px;
+}
+.qsnous-edit{
+    width: 50%;
+    text-align: center;
+}
+.list-group-item-action.active {
+    background-color: var(--rouge);
+    color: white;
+    border: none;
+  }
+  
+.qsnous-edit:active{
+    background-color: none !important;
+    color: white;
+}
+.qsnous-edit:focus{
+    background-color: var(--rouge) !important;
+    color: white;
+}
+.qsnous-content-2-item{
+    display: flex;
+}
+.qsnous-content-3{
+    margin-top: 100px;
+}
+@media screen and (width <= 900px) {
+    .qsnous-banniere h1{
+        font-size: 60px;
+    }
+    .qsnous-filter{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .qsnous-edit{
+        width: 100%;
+    }
+    .qsnous-content-2-item{
+        flex-direction: column;
+    }
+    .qsnous-content-2-item img{
+        width: 250px;
+        height: 250px;
+    }
+    .qsnous-content-1{
+        width: 80%;
+    
+    }
+}
+/* fin css contenu */
 /* css footer */
 .antifaq{
     background-color: var(--rouge);
