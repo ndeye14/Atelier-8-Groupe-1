@@ -9,21 +9,22 @@
     }
     
     function change(e) {
-        card.style.backgroundColor = '#363636';
-        typo.style.color = '#FFF';
-        iListn_2.style.marginLeft = '-8px';
-        iListn_1.style.display = 'inline';
-        cta.style.display = 'inline';
+        card[e].style.backgroundColor = '#363636';
+        typo[e].style.color = '#FFF';
+        iListn_2[e].style.marginLeft = '-8px';
+        iListn_1.style[e].display = 'inline';
+        cta[e].style.display = 'inline';
     }
 
-    function reset() {
-        card.style.backgroundColor = 'white';
-        typo.style.color = 'black';
-        bouton.style.width = 'max-content';
-        iListn_2.style.marginLeft = '0';
-        iListn_1.style.display = 'none';
-        cta.style.display = 'none';
+    function reset(e) {
+        card[e].style.backgroundColor = 'white';
+        typo[e].style.color = 'black';
+        bouton[e].style.width = 'max-content';
+        iListn_2[e].style.marginLeft = '0';
+        iListn_1[e].style.display = 'none';
+        cta.style[e].display = 'none';
     }
-
-    card.addEventListener('mouseover', change);
-    card.addEventListener('mouseout', reset);
+    for (let i = 0; i < iListn_1.length; i++) {
+        card.addEventListener('mouseover', change[i]);
+        card.addEventListener('mouseout', reset[i]);
+    }
