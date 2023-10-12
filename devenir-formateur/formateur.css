@@ -151,3 +151,18 @@
       color: #8e44ad;
       margin-bottom: 5px;
   }
+
+
+
+  @media (max-width:1045px) {
+      .container .box {
+          width: calc(50% - 10px);
+          margin-bottom: 20px;
+      }
+  }
+
+  @media (max-width:710px) {
+      .container .box {
+          width: 100%;
+      }
+  }
