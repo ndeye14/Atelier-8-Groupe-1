@@ -1,5 +1,35 @@
+/* Debut de la section header */
 :root {
     --transparency: rgba(27, 47, 69, 0.7);
+}
+
+body {
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+}
+
+
+.pre-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.title-section {
+    font-weight: 700;
+}
+
+.underline-title {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 100px;
+    height: 4px;
+    margin: 0 auto;
+    gap: 6px;
+}
+
+.underline-title span {
+    border-radius: 8px;
+    background-color: var(--base-color);
 }
 
 /* Partie header */
@@ -9,8 +39,6 @@
     width: 100%;
     background-color: white;
     box-shadow: 0 2px 12px var(--transparency);
-    border-bottom: 1px solid black;
-    background-position: center;
 }
 
 .header-top {
@@ -203,16 +231,16 @@
     padding-left: 10px;
 }
 
+/* Fin de la section hrgb(87, 0, 0)£*/
 
-/* Contenu Banner */
 
-#main {
+#accueil {
     position: relative;
     top: 110px;
 }
 
 .banner {
-    background-image: url(../accueil/images/anti-faq.jpg);
+    background-image: url("../accueil/images/agile-1.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -254,16 +282,300 @@
     top: 450px;
     left: 90px;
 }
-/* section action */
 
-#action {
-    width: 80%;
-    margin: 30px auto;
-    text-align: center;
-    border: 3px solid var(--base-color);
-    padding: 30px;
-    /* borra */
+.desc-accueil {
+    position: absolute;
+    border: 2px solid black;
+    height: max-content;
+    z-index: 200;
+    /* top: 30%; */
+    color: white;
 }
+
+.name-card {
+    background-color: #F8F8F8;
+    width: 90%;
+    margin: auto;
+}
+
+.card-content {
+    background-color: rgb(255, 255, 255);
+    transition: all 200ms;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-card {
+    height: 160px;
+    overflow: hidden;
+}
+
+.image-card img {
+    width: 100%;
+}
+
+.typo-text {
+    min-height: 200px;
+}
+
+.typo-text-2 {
+    min-height: 140px;
+}
+
+.typo-card h5 {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.typo-card p {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.bouton-card {
+    justify-content: space-between;
+}
+
+.bouton-card button {
+    border-radius: 6px;
+    padding: 6px 14px;
+    text-align: left;
+    border: none;
+    font-weight: 700;
+}
+
+.bouton-card button #i-1 {
+    transition: 3s;
+}
+
+.bouton-card button #cta {
+    margin-left: 5px;
+    display: none;
+}
+
+.section-metiers {
+    margin: 0 auto;
+    padding: 0 13%;
+}
+
+.metiers-items {
+    border: 4px solid #D9D9D9;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.metiers-items .mi-left {
+    flex: 5;
+    padding: 10px;
+    text-align: center;
+}
+
+.metiers-items .mi-left h5 {
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.metiers-items .mi-left p {
+    font-size: 0.6em;
+}
+
+.metiers-items .mi-right {
+    flex: 3;
+    overflow: hidden;
+}
+
+.metiers-items .mi-left .btn-card {
+    background-color: white !important;
+}
+
+.temoignages {
+    padding: 0 20%;
+}
+
+@media screen and (max-width: 575.98px) {
+    .temoignages {
+        padding: 0 2%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991.98px) {}
+
+.tem-items {
+    border-radius: 30px;
+}
+
+.tem-items-ele {
+    border: 4px solid rgb(186, 186, 186);
+    border-radius: 30px;
+    min-width: 200px;
+}
+
+.tem-items:nth-child(2) {
+    transform: scale(1.15);
+}
+
+.tem-items:nth-child(2) .tem-items-ele {
+    background-color: rgb(186, 186, 186);
+    border-color: white;
+}
+
+.tem-text {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.tem-items-ele span {
+    font-weight: 700;
+}
+
+.tem-items-ele span::before,
+.tem-items-ele span::after {
+    content: '-';
+}
+
+.tem-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid rgb(186, 186, 186);
+    overflow: hidden;
+}
+
+.tem-items:nth-child(2) .tem-img {
+    border-color: white;
+}
+
+.tem-img img {
+    width: 100%;
+}
+
+
+
+.actualites {
+    margin: 0 auto;
+    display: flex;
+}
+
+.actu-items {
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 40px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: rgb(186, 186, 186);
+}
+
+.left-actu {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-actu img {
+    height: 100%;
+}
+
+.btn-component {
+    position: relative;
+    top: 20%;
+}
+
+@media screen and (max-width: 991.98px) {
+    .actu-items {
+        grid-template-rows: auto auto;
+        height: min-content;
+    }
+}
+
+.btn-component button {
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9em;
+    border-width: 0;
+}
+
+.soutiens {
+    width: 70%;
+    margin: auto;
+}
+
+.sc-img {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.partenaire {
+    width: 70%;
+    margin: 30px auto;
+}
+
+.antifaq {
+    background-color: var(--rouge);
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4% 10%;
+}
+
+.logoContainer {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    padding: 1%;
+}
+
+.logoContainer .slideLogo {
+    -webkit-animation: scroll 30s linear infinite;
+    animation: scroll 130s linear infinite;
+    display: flex;
+    width: calc(150px * 12);
+}
+
+.logoContainer .slide {
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+}
+
+.logoContainer .slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-150px * 7));
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-150px * 7));
+    }
+}
+
 
 /* css footer */
 
@@ -272,6 +584,7 @@
     border: 1px solid var(--rouge);
     border-radius: 4px;
     padding: 5px;
+
 }
 
 .antifaq span {
