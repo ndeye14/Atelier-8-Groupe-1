@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+
+    <!-- Lien booststrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Fin favicon -->
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Fin bootstrap Icon -->
+
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fin fontawsome -->
+    <link rel="stylesheet" href="accueil.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header class="" id="header" class="">
+        <div class="header-top d-flex justify-content-between py-2">
+            <div class="section-left d-flex">
+                <div class="media-element"><i class="fa-brands fa-facebook"></i></div>
+                <div class="media-element"><i class="fa-brands fa-twitter"></i></div>
+                <div class="media-element"><i class="fa-brands fa-youtube"></i></div>
+                <div class="media-element"><i class="fa-brands fa-square-instagram"></i></div>
+            </div>
+            <div class="section-right d-flex gap-2 align-items-center gap-4">
+                <div class="search-part">
+                    <form action="">
+                        <input type="text" name="" id="" placeholder="Recherche"><label for=""><i
+                                class="fa-solid fa-magnifying-glass"></i></label>
+                    </form>
+                </div>
+                <div class="search-alternate" id="search-alternate"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="lang d-flex gap-2">
+                    <span>EN</span>
+                    <span>FR</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom d-flex justify-content-between align-items-center py-1">
+            <div class="logo">
+                <img src="../public/logo/logo.png" alt="">
+            </div>
+            <div class="menu d-flex">
+                <div class="nav-menu d-flex" id="nav-menu">
+                    <div class="dropdown me-1">
+                        <button type="button" class="menu-select " data-bs-toggle="dropdown" aria-expanded="false"
+                            data-bs-offset="10,20">
+                            Accueil
+                        </button>
+                    </div>
+                    <div class="nav-lit dropdown me-1">
+                        <button type="button" class="menu-select  dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-offset="10,20">
+                            A Propos
+                        </button>
+                        <ul class="sous-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Qui sommes nous ?</a></li>
+                            <li><a class="dropdown-item" href="#">Notre pédagogie</a></li>
+                            <li><a class="dropdown-item" href="#">Notre réseau de fabriques</a></li>
+                            <li><a class="dropdown-item" href="#">Nos actions pour un numérique inclusif</a></li>
+                            <li><a class="dropdown-item" href="#">Anti-FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown me-1">
+                        <button type="button" class="menu-select dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-offset="10,20">
+                            Nos Formations
+                        </button>
+                        <ul class="sous-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Infrastructures et cybersécurité</a></li>
+                            <li><a class="dropdown-item" href="#">Développement d'applications</a></li>
+                            <li><a class="dropdown-item" href="#">Fondamentaux numériques</a></li>
+                            <li><a class="dropdown-item" href="#">Cloud & Devops</a></li>
+                            <li><a class="dropdown-item" href="#">Data & intelligence artificielle</a></li>
+                            <li><a class="dropdown-item" href="#">Métavers & XR</a></li>
+                            <li><a class="dropdown-item" href="#">Blockchain</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown me-1">
+                        <button type="button" class="menu-select dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-offset="10,20">
+                            Alternances
+                        </button>
+                        <ul class="sous-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Faire ma formation en alternance</a></li>
+                            <li><a class="dropdown-item" href="#">Recruter en alternance</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown me-1">
+                        <button type="button" class="menu-select dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-offset="10,20">
+                            Candidats
+                        </button>
+                        <ul class="sous-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Nos actions pour les femmes</a></li>
+                            <li><a class="dropdown-item" href="#">Personnes en situation de handicap</a></li>
+                            <li><a class="dropdown-item" href="#">Nos actions pour les refugés étrangers</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown me-1">
+                        <button type="button" class="menu-select dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-offset="10,20">
+                            Entreprises
+                        </button>
+                        <ul class="sous-menu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Former ses salariés</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="burger-menu" id="burger-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="hide-menu" id="hide-menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+        <div class="search-mobile" id="search-mobile">
+            <form action="">
+                <input type="text" placeholder="Entrez votre texte">
+                <input type="submit" value="Rechercher">
+            </form>
+        </div>
+        <script>
+            let navMenu = document.getElementById('nav-menu');
+            let burgerMenu = document.getElementById('burger-menu');
+            let hideMenu = document.getElementById('hide-menu');
+
+            hideMenu.style.display = 'none'
+
+            burgerMenu.addEventListener('click', function () {
+                navMenu.style.left = '0';
+                hideMenu.style.display = 'block';
+                burgerMenu.style.display = 'none';
+            });
+            hideMenu.addEventListener('click', function () {
+                navMenu.style.left = '200%';
+                hideMenu.style.display = 'none';
+                burgerMenu.style.display = 'block';
+            })
+
+            let searchMobile = document.getElementById('search-alternate');
+            let barreSearch = document.getElementById('search-mobile');
+
+            searchMobile.addEventListener('click', function () {
+                barreSearch.style.top = '40vh';
+            });
+        </script>
+
+    </header>
+    <section id="accueil">
+        <div class="banner">
+            <div id="carouselExampleAutoplaying" class="banner-carrousel carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/formation-2.jpg" class="d-block w-100" alt="...">
+                        <div class="desc-accueil carousel-caption d-none d-md-block">
+                            <h5>Simplon, formations numériques</h5>
+                            <p>Simplon, l’école qui forme aux métiers du numérique dans toute la France et à l’international.
+                            ​​​​​​​Rejoignez un réseau de plus de 25 000 apprenants et apprenantes.
+                            ​​​​​​​Vous souhaitez vous aussi intégrer un parcours de formation Simplon ou être conseillé-e dans votre parcours ?</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/formation-2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="pre-section">
+                <h4 class="title-section">Des formations aux métiers du numerique</h4>
+                <div class="underline-title">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="name-card" class="row name-card">
+                <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
+                    <div class="card-content rounded-4 overflow-hidden" id="card-content">
+                        <div class="image-card">
+                            <img src="images/formation-1.jpg" alt="">
+                        </div>
+                        <div class="typo-card p-4" id="typo">
+                            <h5>Infrastructures et Cybersécurité</h5>
+                            <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
+                                vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                            <div class="bouton-card">
+                                <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
+                                        class="fa-solid fa-chevron-right i-2" id="i-2"></i>
+                                    <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
+                    <div class="card-content rounded-4 overflow-hidden" id="card-content">
+                        <div class="image-card">
+                            <img src="images/formation-1.jpg" alt="">
+                        </div>
+                        <div class="typo-card p-4" id="typo">
+                            <h5>Infrastructures et Cybersécurité</h5>
+                            <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
+                                vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                            <div class="bouton-card">
+                                <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
+                                        class="fa-solid fa-chevron-right i-2" id="i-2"></i>
+                                    <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
+                    <div class="card-content rounded-4 overflow-hidden" id="card-content">
+                        <div class="image-card">
+                            <img src="images/formation-1.jpg" alt="">
+                        </div>
+                        <div class="typo-card p-4" id="typo">
+                            <h5>Infrastructures et Cybersécurité</h5>
+                            <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
+                                vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                            <div class="bouton-card">
+                                <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
+                                        class="fa-solid fa-chevron-right i-2" id="i-2"></i>
+                                    <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
+                    <div class="card-content rounded-4 overflow-hidden" id="card-content">
+                        <div class="image-card">
+                            <img src="images/formation-1.jpg" alt="">
+                        </div>
+                        <div class="typo-card p-4" id="typo">
+                            <h5>Infrastructures et Cybersécurité</h5>
+                            <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
+                                vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                            <div class="bouton-card">
+                                <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
+                                        class="fa-solid fa-chevron-right i-2" id="i-2"></i>
+                                    <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
+                    <div class="card-content rounded-4 overflow-hidden" id="card-content">
+                        <div class="image-card">
+                            <img src="images/formation-1.jpg" alt="">
+                        </div>
+                        <div class="typo-card p-4" id="typo">
+                            <h5>Infrastructures et Cybersécurité</h5>
+                            <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
+                                vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                            <div class="bouton-card">
+                                <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
+                                        class="fa-solid fa-chevron-right i-2" id="i-2"></i>
+                                    <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
+                    <div class="card-content rounded-4 overflow-hidden" id="card-content">
+                        <div class="image-card">
+                            <img src="images/formation-1.jpg" alt="">
+                        </div>
+                        <div class="typo-card p-4" id="typo">
+                            <h5>Infrastructures et Cybersécurité</h5>
+                            <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
+                                vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                            <div class="bouton-card">
+                                <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
+                                        class="fa-solid fa-chevron-right i-2" id="i-2"></i>
+                                    <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="carte-1.js"></script>
+            </div>
+        </div>
+        <div class="offre-formations">
+            <div class="pre-section">
+                <h4 class="title-section">Des formations aux métiers du numerique</h4>
+                <div class="underline-title">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <section class="section-metiers container-fluid">
+                <div class="row">
+                    <div class="col-metiers col-12 col-lg-4 col-sm-12 col-md-6 p-3">
+                        <div class="metiers-items d-flex">
+                            <div class="mi-left">
+                                <h5>Fundation Méta Academie</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, dolorum totam aliquam
+                                    eum corrupti quia
+                                    quisquam exercitationem, earum voluptas molestias rerum commodi autem, delectus
+                                    velit obcaecati aperiam
+                                    ipsam doloribus voluptatum!</p>
+                                <div class="bouton-card">
+                                    <button id="btn-card" class="btn-card">
+                                        <i class="fa-solid fa-chevron-right i-2" id="i-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mi-right">
+                                <img src="images/formation-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-metiers col-12 col-lg-4 col-sm-12 col-md-6 p-3">
+                        <div class="metiers-items d-flex">
+                            <div class="mi-left">
+                                <h5>Fundation Méta Academie</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, dolorum totam aliquam
+                                    eum corrupti quia
+                                    quisquam exercitationem, earum voluptas molestias rerum commodi autem, delectus
+                                    velit obcaecati aperiam
+                                    ipsam doloribus voluptatum!</p>
+                                <div class="bouton-card">
+                                    <button id="btn-card" class="btn-card">
+                                        <i class="fa-solid fa-chevron-right i-2" id="i-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mi-right">
+                                <img src="images/formation-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-metiers col-12 col-lg-4 col-sm-12 col-md-6 p-3">
+                        <div class="metiers-items d-flex">
+                            <div class="mi-left">
+                                <h5>Fundation Méta Academie</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, dolorum totam aliquam
+                                    eum corrupti quia
+                                    quisquam exercitationem, earum voluptas molestias rerum commodi autem, delectus
+                                    velit obcaecati aperiam
+                                    ipsam doloribus voluptatum!</p>
+                                <div class="bouton-card">
+                                    <button id="btn-card" class="btn-card">
+                                        <i class="fa-solid fa-chevron-right i-2" id="i-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mi-right">
+                                <img src="images/formation-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="temoignages">
+            <div class="pre-section">
+                <h4 class="title-section">Leurs témoignages</h4>
+                <div class="underline-title">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="tem-items col-12 col-sm-12 col-md-12 col-lg-4 p-4">
+                        <div
+                            class="tem-items-ele d-flex flex-column justify-content-center align-items-center gap-5 py-5 px-3 text-center">
+                            <div class="tem-img">
+                                <img src="https://images.prismic.io/utopix-next-website/Mzk0NGJkOWEtY2ZlYS00MjVjLTkwNTAtOGY5OWQzN2IzNGVi_762cec57-2eaf-4eaf-9a0d-2e7860147e48_profilhomme7.jpg?ixlib=js-3.8.0&w=3840&auto=format&fit=max"
+                                    alt="">
+                            </div>
+                            <p class="tem-text fst-italic fS-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A omnis, odio consectetur
+                                corporis temporibus distinctio provident est eaque obcaecati quidem molestiae, ipsum
+                                perspiciatis nam neque id tempora? Tempore, perferendis placeat.
+                            </p>
+                            <span>Asaane Diop</span>
+                        </div>
+                    </div>
+                    <div class="tem-items col-12 col-sm-12 col-md-12 col-lg-4 p-4">
+                        <div
+                            class="tem-items-ele d-flex flex-column justify-content-center align-items-center gap-5 py-5 px-3 text-center">
+                            <div class="tem-img">
+                                <img src="https://images.prismic.io/utopix-next-website/Mzk0NGJkOWEtY2ZlYS00MjVjLTkwNTAtOGY5OWQzN2IzNGVi_762cec57-2eaf-4eaf-9a0d-2e7860147e48_profilhomme7.jpg?ixlib=js-3.8.0&w=3840&auto=format&fit=max"
+                                    alt="">
+                            </div>
+                            <p class="tem-text fst-italic fS-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A omnis, odio consectetur
+                                corporis temporibus
+                                distinctio provident est eaque obcaecati quidem molestiae, ipsum perspiciatis nam neque
+                                id tempora? Tempore,
+                                perferendis placeat.
+                            </p>
+                            <span>Asaane Diop</span>
+                        </div>
+                    </div>
+                    <div class="tem-items col-12 col-sm-12 col-md-12 col-lg-4 p-4">
+                        <div
+                            class="tem-items-ele tie-scale d-flex flex-column justify-content-center align-items-center gap-5 py-5 px-3 text-center">
+                            <div class="tem-img">
+                                <img src="https://images.prismic.io/utopix-next-website/Mzk0NGJkOWEtY2ZlYS00MjVjLTkwNTAtOGY5OWQzN2IzNGVi_762cec57-2eaf-4eaf-9a0d-2e7860147e48_profilhomme7.jpg?ixlib=js-3.8.0&w=3840&auto=format&fit=max"
+                                    alt="">
+                            </div>
+                            <p class="tem-text fst-italic fS-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A omnis, odio consectetur
+                                corporis temporibus
+                                distinctio provident est eaque obcaecati quidem molestiae, ipsum perspiciatis nam neque
+                                id tempora? Tempore,
+                                perferendis placeat.
+                            </p>
+                            <span>Asaane Diop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actualites">
+            <div class="actu-number">
+                <div class="pre-section">
+                    <h4 class="title-section">Nos actualités</h4>
+                    <div class="underline-title">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="actu-items">
+                                <div class="left-actu">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, eum dolorem. In, aperiam
+                                        tempora.</p>
+                                    <div class="btn-component">
+                                        <button>S'INSCRIRE DES MAINTENANT</button>
+                                    </div>
+                                </div>
+                                <div class="right-actu">
+                                    <img src="images/actu-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="actu-items">
+                                <div class="left-actu">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, eum dolorem. In, aperiam
+                                        tempora.</p>
+                                    <div class="btn-component">
+                                        <button>S'INSCRIRE DES MAINTENANT</button>
+                                    </div>
+                                </div>
+                                <div class="right-actu">
+                                    <img src="images/actu-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="actu-items">
+                                <div class="left-actu">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, eum dolorem. In, aperiam
+                                        tempora.</p>
+                                    <div class="btn-component">
+                                        <button>S'INSCRIRE DES MAINTENANT</button>
+                                    </div>
+                                </div>
+                                <div class="right-actu">
+                                    <img src="images/actu-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="soutiens">
+            <div class="pre-section">
+                <h4 class="title-section">Nos soutiens</h4>
+                <div class="underline-title">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="soutiens-content d-flex justify-content-center gap-5">
+                <!-- <div class="sc-left d-flex gap-4 align-items-center">
+                    <h5>Orange</h5>
+                    <div class="sc-img">
+                        <img src="images/logo-orange.png" alt="" class="img-fluid">
+                    </div>
+                </div> -->
+                <div class="sc-left d-flex gap-4 align-items-center">
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="slide-soutien d-flex gap-5">
+                                    <div class="sc-img">
+                                        <img src="images/logo-orange.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-apple.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-sonatel-academie.jfif" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-wave.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="slide-soutien d-flex gap-5">
+                                    <div class="sc-img">
+                                        <img src="images/logo-wave.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-apple.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-orange.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-sonatel-academie.jfif" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="slide-soutien d-flex gap-5">
+                                    <div class="sc-img">
+                                        <img src="images/logo-orange.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-apple.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-sonatel-academie.jfif" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-wave.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="partenaire">
+            <div class="pre-section">
+                <h4 class="title-section">Nos partenaires</h4>
+                <div class="underline-title">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="soutiens-content d-flex justify-content-center gap-5">
+                <!-- <div class="sc-left d-flex gap-4 align-items-center">
+                    <h5>Orange</h5>
+                    <div class="sc-img">
+                        <img src="images/logo-orange.png" alt="" class="img-fluid">
+                    </div>
+                </div> -->
+                <div class="sc-left d-flex gap-4 align-items-center">
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="slide-soutien d-flex gap-5">
+                                    <div class="sc-img">
+                                        <img src="images/logo-orange.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-apple.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-sonatel-academie.jfif" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-wave.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="slide-soutien d-flex gap-5">
+                                    <div class="sc-img">
+                                        <img src="images/logo-wave.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-apple.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-orange.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-sonatel-academie.jfif" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="slide-soutien d-flex gap-5">
+                                    <div class="sc-img">
+                                        <img src="images/logo-orange.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-apple.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-sonatel-academie.jfif" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="sc-img">
+                                        <img src="images/logo-wave.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class=" text-center text-lg-start  text-muted ">
+            <!-- Section: Social media -->
+            <section class="antifaq container-fluid ">
+                <div class="container  d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        
+                    <div class="row">
+                        <div class="col-md-4">
+                            <span class="">Vous avez une question?</span><br>
+                            <button type="button" class="btn btn-light btn-sm">CONSULTER NOTRE ANTI-FAQ</button>
+        
+                        </div>
+                        <div class="col-md-4 ms-auto  Inputbutton">
+                            <span>Inscrivez-vous a la newsletter</span><br>
+                            <input type="email" placeholder="Enter votre email" class="inputEmail shadow ">
+                            <button type="button" class="btnInscrire  shadow ">S'INSCRIRE</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section: Links  -->
+            <section class="border">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row ">
+                        <!-- Grid column -->
+                        <div class="col-lg-8 ">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-lg-6 ">
+                                    <h4 class="  mb-4 ">
+                                        Pages
+                                    </h4>
+                                    <ul class="foot-ul">
+                                        <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                    fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                </svg>Devenir formateur</a></li>
+                                        <li><a href=""><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                        fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                    </svg>Rejoindre notre equipe</a></li>
+                                        <li><a href=""><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                        fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                    </svg>Blog</a></li>
+                                        <li><a href=""><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                        fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                    </svg>Plan du site</a></li>
+        
+                                    </ul>
+        
+                                </div>
+                                <div class="col-12 col-sm-12 col-lg-6 mt-5">
+                                    <ul>
+                                        <li><a href=""><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                        fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                    </svg>Presse</a></li>
+                                        <li><a href=""><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                        fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                    </svg>Simplon foundation</a></li>
+                                        <li><a href=""><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                        fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                    </svg>Accessibilite</a></li>
+                                        <li><a href=""><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                        fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                    </svg>Mention legales</a></li>
+                                    </ul>
+        
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+                        <div class="col-12 col-sm-12 col-lg-4">
+                            <div class="">
+                                <!-- Links -->
+                                <h4 class=" mb-4">Contact</h4>
+                                <p><i class="fa-solid fa-location-dot fa-sm" style="color:var(--rouge);"></i> Adresse:34
+                                    Avenue,Batiment D a
+                                    Grenoble </p>
+                                <p><i class="fas fa-phone fa-sm me-3" style="color:var(--rouge);"></i>telephone: + 01 234 567 88
+                                </p>
+                                <p>
+                                    <i class="fas fa-envelope fa-sm me-3" style="color:var(--rouge);"></i>
+                                    Email:info@example.com
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+        
+            <!-- Copyright -->
+            <hr class="container traitfooter">
+            <div class="text-center border">
+                © Design par Groupe-1 .Tout droit reserve
+        
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </section>
+    <!-- section footer -->
+    <!-- end footer -->
+</body>
+</html>
