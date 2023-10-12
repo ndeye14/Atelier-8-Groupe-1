@@ -1,0 +1,79 @@
+.handi{
+    border: 3px solid #13be2a;
+    background-image: url(../public/image/ha.PNG);
+    padding: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.handicap{
+    border: 1px solid #000;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+h4{
+    border: 1px solid #000;
+    margin-top: 20%;
+    text-align: center;
+}
+.handicap .cap{
+    border: 1px solid #000;
+    width: 50%;
+}
+ .handicap.cap {
+    width: 50%;
+}
+.cap img{
+    width: 100%;
+}
+.handicap .sommaire{
+    border: 1px solid #000;
+    /* margin-left: 15%; */
+    padding: 0;
+    width: 50%;
+}
+.sommaire p{
+    border: 1px solid #000;
+    width: 40%;
+}
+.chiffre h3{
+    text-align: center;
+}
+.cles{
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    background-image: url(../public/image/cla.PNG);
+    background:linear-gradient(0deg, rgba(3, 3, 3, 0.603), rgba(15, 20, 25, 0.699)), url(../public/image/cla.PNG), no-repeat;
+    padding: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#text{
+    color: white;
+    margin-top: 0%;
+    margin-left: 5%;
+}
+#num{
+    border: 1px solid #000;
+    width: 25%;
+    margin-left: 1%;
+    background-color: #00000081;
+}
+#num :first-child{
+    color: red;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+/* #text{
+    border: 1px solid #000;
+    margin-left: 5%;
+} */
+/* #num :last-child{
+    margin-top: 10%;
+    border: 1px solid #000;
+
+} */
