@@ -5,15 +5,28 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+@media screen and (max-width: 768px){
+    .banier{
+        width: auto;
+    }
+    
+}
 .cours{
     /* border: 1px solid #000; */
     width: 35%;
     margin-left: 30%;
     margin-top: -10%;
     padding: 5px;
-    background-color: gray;
+    background-color: rgb(160, 157, 157);
     margin-bottom: -10%;
 
+}
+@media screen and (max-width: 768px) {
+    .cours{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
 }
 .cours h5{
     width: 60%;
@@ -22,9 +35,22 @@
     color: white;
     font-size: 30px;
 }
+@media screen and (max-width: 768px){
+    .formations{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0 auto;
+    }
+     #formation{
+        width: 100%;
+     }
+     #btn{
+        width: 100%;
+     }
+}
 .formations{
     /* border: 1px solid #000; */
-    background-color: gray;
+    background-color: rgb(160, 157, 157);
     position: relative;
     padding: 30px;
     width: 80%;
@@ -48,11 +74,19 @@
     /* border: 1px solid #000; */
     display: flex;
     justify-content: space-between;
-    background-color: gray;
+    background-color: rgb(160, 157, 157);
     width: 80%;
     margin-left: 9%;
     margin-top: 1%;
 }
+/* responsive */
+    @media screen and (max-width: 768px) {
+        .contact{
+            display: grid;
+            grid-template-columns: auto;
+            width: auto;
+        }
+    }
 .donnees{
     /* border: 1px solid #000; */
     width: 90%;
@@ -64,16 +98,35 @@
     padding-right: -50px;
     margin-bottom: 2%;
 }
+/* responsive */
+@media screen and (max-width: 768px){
+    #donne{
+        width: 100%;
+        padding: 45px;
+        margin-top: 5%;
+    }
+    
+}
+
 .contact label{
     margin-left: 5%;
 
 }
 .contact  input,textarea{
     margin-top: 5%;
-    background-color: gray;
+    background-color: rgb(160, 157, 157);
     width: 90%;
-    padding: 5px;
+    padding: 1px;
     margin-left: 5%;
+}
+@media screen and (max-width: 768px){
+    .contact input,textarea{
+        width: 100%;
+        margin-right: 10%;
+    }
+    .contact{
+        height: 600%;
+    }
 }
 .contact textarea{
     margin-left: 5%;
@@ -89,6 +142,15 @@
     width: 50%;
     background-color: white;
    
+}
+@media screen and (max-width: 768px) {
+    .info{
+        width: 100%;
+        padding: 6px;
+        margin-left: 9%;
+        margin-bottom: 2%;
+    }
+    
 }
 .info span,h2{
     margin-left: 5%;
@@ -119,3 +181,10 @@
     margin-right: 20%;
 
 }
+@media screen and (max-width:768){
+    .localisation iframe{
+        width: auto;
+        margin: 0 auto;
+    }
+}
+    
