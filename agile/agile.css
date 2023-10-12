@@ -304,6 +304,11 @@ body {
     gap: 50px;
     margin: 30px auto;
 }
+@media screen and (max-width: 419px) {
+    .tout-ele {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 .list-corps {
     background-color: transparent;
@@ -318,6 +323,11 @@ body {
 }
 .list-group-item-action.active {
     background-color: transparent;
+}
+.list-corps.active {
+    color: var(--base-color);
+    text-decoration: underline;
+    text-underline-offset: 8px;
 }
 .content-ele {
     /* display: flex; */
