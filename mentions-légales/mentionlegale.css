@@ -231,11 +231,10 @@
         /* color: #CE0033; */
     }
 }
-@media screen and (width <= 390px) {
+/* @media screen and (width <= 390px) {
     .mlegal-banniere h1{
-        fonts
     }
-}
+} */
 
 /* fin css contenu */
 

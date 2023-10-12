@@ -1,0 +1,63 @@
+:root{
+    --rouge :#CE0033;
+    --bleu :#06114d8b;
+    --gris :#f6f6f6;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+#header{
+    box-shadow: 0 2px 12px #06114d8b
+}
+/* debut css de la banniere */
+.action-banniere{
+    background-image: url(https://img.freepik.com/photos-gratuite/quatre-meilleures-amies-jeunes-femmes-africaines-s-amusant-passant-du-temps-ensemble-empiler-mains-puis-remonter_627829-850.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=ais);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+}
+.action-banniere::before{
+    content: '';
+    background-color: #06114d8b;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.action-banniere h1{
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+    position: relative;
+    z-index: 2;
+}
+.action-path {
+    color: white;
+    font-weight: bold;
+    /* font-size: 80px; */
+    position: absolute;
+    z-index: 2;
+    top: 450px;
+    left: 10px;
+}
+.action-titre{
+    color: white;
+    font-weight: bold;
+    /* font-size: 80px; */
+    position: absolute;
+    z-index: 2;
+    top: 300px;
+    /* left: 10px; */
+}
+.action-banniere p a{
+    color: white;
+}
+/* fin css de la banniere */
