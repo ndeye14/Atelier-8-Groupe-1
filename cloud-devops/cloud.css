@@ -109,25 +109,33 @@
         justify-content: center;
         width: 100%;
         margin: 20px auto;
+        align-items: center;
     }
     .cloud-text{
-        width: 100%;
+        width: 80%;
     }
     .cloud-text img{
-        left: 280px;
+        left: 270px;
         top: -55px;
+    }
+    .cloud-carte{
+        margin-top: 50px;
+        text-align: center;
+        align-items: center;
     }
 }
 @media screen and (width <= 390px) {
     .cloud-carte-card{
-        width: 50%;
+        width: 100%;
+        align-items: center;
     }
     .cloud-carte-card .card{
-        width: 50%;
-    }
-    .cloud-text{
         width: 100%;
+        align-items: center;
     }
+    /* .cloud-text{
+        width: 100%;
+    } */
     .cloud-text h2{
         font-size: 20px;
     }

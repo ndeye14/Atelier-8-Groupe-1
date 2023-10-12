@@ -429,8 +429,6 @@
     .alternance-content{
         display: grid;
         grid-template-columns: 1fr;
-        /* gap: 10px;
-        margin: 20px 15px; */
     }
     .alternance-content-left{
         height: 350px;
@@ -440,12 +438,6 @@
     .alternance-content-right{
         height: 500px;
     }
-    /* .alternance-content-left button{
-        padding: 5px 100px;
-        text-align: left !important;
-        font-size: 10px;
-        background-color: black;
-    } */
     .alternance-content-right-button button{
         justify-content: center;
         text-align: center;
