@@ -223,7 +223,7 @@ main{
     border-radius: 10px;
 }
 
-.antifaq{
+/* .antifaq{
     background-color: var(--rouge);
 }
 .inputEmail,.btnInscrire{
@@ -244,14 +244,14 @@ ul li a{
 }
 svg{
     color: var(--rouge);
-}
+} */
 /* li::before{
     content:".";
     color: var(--rouge);
     width: 5em;
 
 } */
-.point{
+/* .point{
     width: 1px;
 
 }
@@ -262,13 +262,13 @@ footer h4{
     font-weight: bolder;
     font-style: italic;
     color: black;
-}
+} */
 
 
 /* end css footer */
 
 /* responsive footer */
-@media screen and (width>= 390px){
+/* @media screen and (width>= 390px){
     .antifaq .container{
         display: flex;
         flex-direction: column;
@@ -284,6 +284,6 @@ footer h4{
         text-decoration: underline ;
     }
     
-}
+} */
 
 
