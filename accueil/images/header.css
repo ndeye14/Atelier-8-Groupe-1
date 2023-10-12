@@ -2,9 +2,7 @@
 #header {
     position: fixed;
     width: 100%;
-    z-index: 100;
-    background-color: white;
-    top: 0;
+    border: 1px solid rgb(0, 0, 0);
 }
 .header-top {
     background-color: #F6F6F6;
@@ -14,11 +12,6 @@
 .section-left {
     gap: 10px;
 }
-.banner{
-    position: relative;
-    /* top: 5px; */
-}
-
 @media screen and (max-width: 575.98px) {
     .media-element {
         transform: scale(0.8);
@@ -172,6 +165,3 @@
     padding-left: 10px;
 }
 /* Fin de la section hrgb(87, 0, 0)£*0/
-
-
-/* Page d accueil */

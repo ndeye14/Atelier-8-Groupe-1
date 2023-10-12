@@ -7,9 +7,9 @@
     height: 400px;
 }
 .carousel-caption{
-    background-color: white;
+    background-color: rgb(0, 0, 0,0.5);
     bottom: 25%;
-    color: var(--rouge);
+    color: white;
 }
 .carousel-caption h3{
     font-weight: bolder;
