@@ -1,10 +1,10 @@
-/* Debut de la section header */
 #header {
     position: fixed;
     width: 100%;
-    z-index: 100;
+    border: 1px solid rgb(0, 0, 0);
     background-color: white;
-    top: 0;
+    z-index: 100;
+
 }
 .header-top {
     background-color: #F6F6F6;
@@ -14,11 +14,6 @@
 .section-left {
     gap: 10px;
 }
-.banner{
-    position: relative;
-    /* top: 5px; */
-}
-
 @media screen and (max-width: 575.98px) {
     .media-element {
         transform: scale(0.8);
@@ -171,7 +166,124 @@
 .search-mobile input:first-child {
     padding-left: 10px;
 }
-/* Fin de la section hrgb(87, 0, 0)£*0/
+
+main{
+    border: 1px solid #000;
+    background-image: url(https://extranet.adnov.fr/image/212/72e5aef45180ba51eb1518a1c9f52747.jpeg);
+    padding: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ .image{
+    /* border: 1px solid #000; */
+}
+.action{
+    border: 2px solid #d10e0e;
+    width: 65%;
+    border-radius: 0px 40px 0px 40px;
+    margin-top: 2%;
+    padding: 20px;
+    margin-left: 15%;
+    margin-bottom: 10%;
+}
+.action h4{
+    margin-top: -1%;
+    text-align: center;
+}
+.action img{
+    /* border: 2px solid #831212; */
+    width: 5%;
+    margin-left: 95%;
+    margin-top: -6%;
+}
+.action p{
+    /* border: 2px solid #831212; */
+    width: 80%;
+    margin-left: 12%;
+    margin-top: -2%;
+}
+.text{
+    /* border: 2px solid #831212; */
+    margin-top: -7%;
+    /* margin-left: 20%; */
+    /* margin-bottom: 20%; */
+    padding: 1px;
+    text-align: center;
+}
+.container{
+    border: 2px solid #070707;
+    margin-bottom: 2%;
+}
+.card button{
+    background-color: #d10e0e;
+    color: white;
+    font-weight: bold;
+    margin-left: 25%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* .antifaq{
+    background-color: var(--rouge);
+}
+.inputEmail,.btnInscrire{
+    border: 1px solid var(--rouge);
+    border-radius: 4px;
+    padding: 5px;
+    
+}
+.antifaq span{
+    color: white;
+    font-weight: bold;
+}
+.traitfooter{
+    color: var(--rouge);
+}
+ul li a{
+    color: var(--noir);
+}
+svg{
+    color: var(--rouge);
+} */
+/* li::before{
+    content:".";
+    color: var(--rouge);
+    width: 5em;
+
+} */
+/* .point{
+    width: 1px;
+
+}
+footer{
+    border: 1px solid red;
+}
+footer h4{
+    font-weight: bolder;
+    font-style: italic;
+    color: black;
+} */
 
 
-/* Page d accueil */
+/* end css footer */
+
+/* responsive footer */
+/* @media screen and (width>= 390px){
+    .antifaq .container{
+        display: flex;
+        flex-direction: column;
+    
+    }
+         
+}
+@media screen and (max-width:390px){
+    li svg{
+        display: none;
+    }
+    h6{
+        text-decoration: underline ;
+    }
+    
+} */
+
+

@@ -1,5 +1,12 @@
 
 /* css footer */
+footer{
+    width: 100%;
+}
+ul{
+    padding: 0;
+    /* margin: 0; */
+}
 .antifaq{
     background-color: var(--rouge);
 }
@@ -22,19 +29,14 @@ ul li a{
 svg{
     color: var(--rouge);
 }
-/* li::before{
-    content:".";
-    color: var(--rouge);
-    width: 5em;
-
-} */
+ 
 .point{
     width: 1px;
 
 }
-footer{
+/* footer{
     border: 1px solid red;
-}
+} */
 footer h4{
     font-weight: bolder;
     font-style: italic;
@@ -51,17 +53,36 @@ footer h4{
         flex-direction: column;
     
     }
+    
          
 }
 @media screen and (max-width:390px){
     li svg{
         display: none;
     }
-    h6{
-        text-decoration: underline ;
+    footer li{
+        text-decoration: underline !important;
     }
+    .newletter{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .Inputbutton{
+        margin-top: 10px;
+    }
+    .navmenu{
+       
+            flex-direction: column;
+
+    }
+    .videotetu iframe{
+        width: 360px;
+    }
+
     
-}
+} 
+
 
 
 /* end responsive footer */

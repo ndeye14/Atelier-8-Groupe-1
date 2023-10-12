@@ -1,10 +1,16 @@
+:root{
+    --rouge :#CE0033;
+    --bleu :#06114d8b;
+    --gris :#f6f6f6;
+}
 /* Debut de la section header */
 #header {
     position: fixed;
     width: 100%;
-    z-index: 100;
+    /* border: 1px solid rgb(0, 0, 0); */
     background-color: white;
-    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px #06114d8b;
 }
 .header-top {
     background-color: #F6F6F6;
@@ -14,11 +20,6 @@
 .section-left {
     gap: 10px;
 }
-.banner{
-    position: relative;
-    /* top: 5px; */
-}
-
 @media screen and (max-width: 575.98px) {
     .media-element {
         transform: scale(0.8);
@@ -153,9 +154,6 @@
         font-size: 1.4em;
         margin: 12px 0;
     }
-    .menu .sous-menu {
-        
-    }
 }
 
 .search-mobile {
@@ -171,7 +169,129 @@
 .search-mobile input:first-child {
     padding-left: 10px;
 }
-/* Fin de la section hrgb(87, 0, 0)£*0/
+/* Fin de la section hrgb(87, 0, 0)£*/
+
+/* debut css contenu */
+/* css banniere */
+.mlegal-banniere{
+    background-image: url(https://img.freepik.com/photos-gratuite/prise-vue-grand-angle-marteau-documents-proces-surface-bois_181624-57259.jpg?size=626&ext=jpg&ga=GA1.2.12207566.1692912950&semt=ais);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+}
+.mlegal-banniere::before{
+    content: '';
+    background-color: #06114d8b;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.mlegal-banniere h1{
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+    position: relative;
+    z-index: 2;
+}
+.mlegal-banniere p{
+    color: white;
+    font-weight: bold;
+    /* font-size: 80px; */
+    position: absolute;
+    z-index: 2;
+    top: 330px;
+}
+.mlegal-banniere p a{
+    color: white;
+}
+/* fin css banniere */
+.mlegal-content{
+    margin: 60px 0;
+}
+.mlegal-content1{
+    display: flex;
+    flex-direction: column;
+    justify-content: justify;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.mlegal-content1 h2{
+    color: var(--rouge);
+}
+@media screen and (width <= 900px) {
+    .mlegal-content1{
+        justify-content: center;
+        /* color: #CE0033; */
+    }
+}
+/* @media screen and (width <= 390px) {
+    .mlegal-banniere h1{
+    }
+} */
+
+/* fin css contenu */
+
+/* css footer */
+.antifaq{
+    background-color: var(--rouge);
+}
+.inputEmail,.btnInscrire{
+    border: 1px solid var(--rouge);
+    border-radius: 4px;
+    padding: 5px;
+    
+}
+.antifaq span{
+    color: white;
+    font-weight: bold;
+}
+.traitfooter{
+    color: var(--rouge);
+}
+ul li a{
+    color: var(--noir);
+}
+svg{
+    color: var(--rouge);
+}
+
+.point{
+    width: 1px;
+
+}
+footer h4{
+    font-weight: bolder;
+    font-style: italic;
+    color: black;
+}
 
 
-/* Page d accueil */
+/* end css footer */
+
+/* responsive footer */
+@media screen and (width>= 390px){
+    .antifaq .container{
+        display: flex;
+        flex-direction: column;
+    
+    }
+         
+}
+@media screen and (max-width:390px){
+    li svg{
+        display: none;
+    }
+    h6{
+        text-decoration: underline ;
+    }
+    
+}
+
+/* end responsive footer */
