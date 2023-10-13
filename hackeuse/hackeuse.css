@@ -240,7 +240,7 @@ body {
 }
 
 .banner {
-    background-image: url("../accueil/images/agile-1.webp");
+    background-image: url("https://img.freepik.com/photos-premium/hackeuse-portant-sweat-capuche-pour-se-couvrir-visage-tout-commettant-cybercrimes-contre-gouvernement_482257-20621.jpg?size=626&ext=jpg&ga=GA1.1.869340897.1689281166&semt=sph");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -304,6 +304,10 @@ body {
     gap: 50px;
     margin: 30px auto;
 }
+.part-ele-item{
+    color: var(--base-color);
+    font-weight: bold;
+}
 @media screen and (max-width: 419px) {
     .tout-ele {
         grid-template-columns: repeat(1, 1fr);
@@ -346,12 +350,12 @@ body {
         font-size: 0.8;
     }
 }
-.list-agile {
+.list-hackeuse {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.list-agile .puce {
+.list-hackeuse .puce {
     height: 10px;
     width: 10px;
     border-radius: 50%;
@@ -363,7 +367,7 @@ body {
 }
 .tab-pane p {
 }
-.list-agile-last {
+.list-hackeuse-last {
     padding: 30px 0;
 }
 .hr-proto {
@@ -477,4 +481,4 @@ footer h4 {
     padding-left: 0;
 }
 
-/* end responsive footer */
+/* end responsive footer 
