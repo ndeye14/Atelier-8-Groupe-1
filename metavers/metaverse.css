@@ -169,7 +169,7 @@
 
 main{
     border: 1px solid #000;
-    background-image: url(https://extranet.adnov.fr/image/212/72e5aef45180ba51eb1518a1c9f52747.jpeg);
+    background-image: url(../public/image/vers.PNG);
     padding: 300px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -208,10 +208,12 @@ main{
     /* margin-left: 20%; */
     /* margin-bottom: 20%; */
     padding: 1px;
-    text-align: center;
+    /* text-align: center; */
+    margin-left: 14%;
+    font-size: 25px;
 }
 .container{
-    border: 2px solid #070707;
+    /* border: 2px solid #070707; */
     margin-bottom: 2%;
 }
 .card button{

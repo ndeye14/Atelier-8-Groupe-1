@@ -175,7 +175,7 @@ main {
 .banier {
     /* border: 1px solid #000; */
     /* background-image: url(../public/image/fro.PNG); */
-    background:linear-gradient(0deg, rgba(3, 3, 3, 0.603), rgba(15, 20, 25, 0.699)), url(../public/image/fro.PNG), no-repeat;
+    background:linear-gradient(0deg, rgba(78, 78, 78, 0.603), rgba(35, 42, 48, 0.699)), url(../public/image/fro.PNG), no-repeat;
     background-size: cover;
     padding: 200px;
     /* border: 1px solid #000; */
@@ -189,7 +189,7 @@ main {
     padding: 10px;
     width: 50%;
     margin: 0 auto;
-    border: 2px solid rgba(255, 255, 255, 0.308);
+    /* border: 2px solid rgba(255, 255, 255, 0.308); */
     border-radius: 15px;
 }
 .pedagogie{
@@ -200,8 +200,27 @@ main {
     width: 70%;
     margin-left: 15%;
 }
+@media screen and (max-width: 768px) {
+    .pedagogie{
+        border: 2px solid rgb(199, 9, 9);
+        /* padding: 10px; */
+        margin-top: 35%;
+        border-radius: 20px;
+        width: 70%;
+        margin-left: 15%;
+    }
+    #equipe{
+        text-align: center;
+    }
+    #notre{
+        text-align: center;
+        margin: 0 auto;
+    }
+}
 .pedagogie h1{
     text-align: center;
+    font-size: 40px;
+    color: rgb(199, 9, 9);
 }
 /* .pedagogie h4{ */
     /* text-align: center;
@@ -209,74 +228,9 @@ main {
     font-size:60px */
 
 
-/* footer */
-
- footer.antifaq{
-    background-color: var(--rouge);
-}
-.inputEmail,.btnInscrire{
-    border: 1px solid var(--rouge);
-    border-radius: 4px;
-    padding: 5px;
-    
-}
-.antifaq span{
-    color: white;
-    font-weight: bold;
-}
-.traitfooter{
-    color: var(--rouge);
-}
-ul li a{
-    color: var(--noir);
-}
-svg{
-    color: var(--rouge);
-}
-/* li::before{
-    content:".";
-    color: var(--rouge);
-    width: 5em;
-
-} */
-.point{
-    width: 1px;
-
-}
-footer{
-    border: 1px solid red;
-}
-footer h4{
-    font-weight: bolder;
-    font-style: italic;
-    color: black;
-}
-
-
-/* end css footer */
-
-/* responsive footer */
-@media screen and (width>= 390px){
-    .antifaq .container{
-        display: flex;
-        flex-direction: column;
-    
-    }
-         
-}
-@media screen and (max-width:390px){
-    li svg{
-        display: none;
-    }
-    h6{
-        text-decoration: underline ;
-    }
-    
-}
-
 
 /* banniere */
-.banner {
+/* .banner {
     margin-top: 100px;
 }
 
@@ -435,7 +389,7 @@ footer h4{
 
 .chiffre h3{
     text-align: center;
-    color: rgb(184, 8, 8);
+    color: rgb(199, 9, 9);
     font-size: 40px;
 }
 .cles{
@@ -476,4 +430,4 @@ footer h4{
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 10%;
-}
+} 

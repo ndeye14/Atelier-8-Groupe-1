@@ -169,7 +169,7 @@
 
 main{
     border: 1px solid #000;
-    background-image: url(https://extranet.adnov.fr/image/212/72e5aef45180ba51eb1518a1c9f52747.jpeg);
+    background-image: url(../public/image/dev\ -\ Copie.PNG);
     padding: 300px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -254,6 +254,21 @@ svg{
 .point{
     width: 1px;
 
+}
+@media screen and (max-width:768px){
+ .container{
+        padding: 0;
+        margin: 0;
+    }
+        button{
+            margin-right: 100%;
+        }
+        .card-ody{
+            margin: 0 auto;
+        }
+        .card-text .card-title {
+            margin: 0 auto;
+        }
 }
 footer{
     border: 1px solid red;
