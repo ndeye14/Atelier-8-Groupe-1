@@ -171,8 +171,12 @@
 /* Fin de la section hrgb(87, 0, 0)£*/
 
 /* debut css contenu */
+.qsnous{
+    position: relative;
+    top: 110px;
+}
 .qsnous-banniere{
-    background-image: url(https://img.freepik.com/photos-gratuite/gens-qui-se-rencontrent-pour-discuter-situation-marketing_1421-564.jpg?size=626&ext=jpg&ga=GA1.2.12207566.1692912950&semt=sph);
+    background-image: url(https://img.freepik.com/photos-gratuite/instructeur-aidant-etudiants-cours-informatique_74855-2020.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=sph);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -193,7 +197,7 @@
 .qsnous-banniere h1{
     color: white;
     font-weight: bold;
-    font-size: 80px;
+    font-size: 50px;
     position: relative;
     z-index: 2;
 }
@@ -212,16 +216,20 @@
     margin-top: 50px;
 }
 .qsnous-content h4, .qsnous-content-1 h4, .qsnous-content-2 h4, .qsnous-content-3 h4{
-    font-size: 25px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
+    align-items: center;
     color: var(--rouge);
 }
-.qsnous-content hr, .qsnous-content-1 hr, .qsnous-content-2 hr, .qsnous-content-3 hr{
-    color: black;
+/* .qsnous-line{
+    background-color: black;
     width: 10%;
-    size:  25px;
-}
+    height: 3px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+} */
 .qsnous-content p{
     background-color: #f6f6f6;
     padding: 20px 15px;
