@@ -17,6 +17,8 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Fin favicon -->
@@ -169,38 +171,80 @@
         </script>
 
     </header>
-    <section id="accueil">
+    <main id="accueil">
         <div class="banner">
-            <div id="carouselExampleAutoplaying" class="banner-carrousel carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/formation-2.jpg" class="d-block w-100" alt="...">
-                        <div class="desc-accueil carousel-caption d-none d-md-block">
-                            <h5>Simplon, formations numériques</h5>
-                            <p>Simplon, l’école qui forme aux métiers du numérique dans toute la France et à l’international.
-                            ​​​​​​​Rejoignez un réseau de plus de 25 000 apprenants et apprenantes.
-                            ​​​​​​​Vous souhaitez vous aussi intégrer un parcours de formation Simplon ou être conseillé-e dans votre parcours ?</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/formation-2.jpg" class="d-block w-100" alt="...">
-                    </div>
+            <div class="content-banner">
+            
+            
+                
+               
+                <style>
+                  #map {
+                    height: 400px;
+                  }
+                </style>
+            
+              
+              <!-- Sélection de la région à afficher sur la carte -->
+              <label for="region">Choisissez une région : </label>
+              <select id="region" onchange="changeMap()">
+                <option value="0,0,2,Monde">Monde</option>
+                <option value="48.8566,2.3522,6,Europe">Europe (Paris, France)</option>
+                <option value="40.7128,-74.0060,6,Amérique du Nord">Amérique du Nord (New York, USA)</option>
+                <option value="34.0522,-118.2437,6,Asie">Asie (Los Angeles, USA)</option>
+              </select>
+              
+              <!-- Conteneur pour la carte Leaflet -->
+              <div id="map"></div>
+                <div class="chemin">
+                    <button>Accueil / Nos formations</button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
-    
-        
-        </head>
+   
+  
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    // Création de la carte Leaflet
+    var map = L.map('map').setView([0, 0], 2);
+  
+    // Ajout de la couche de tuiles OpenStreetMap à la carte
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+  
+    // Groupe de calques pour les marqueurs
+    var markers = L.layerGroup().addTo(map);
+  
+    // Données des marqueurs pour chaque région
+    var markersData = {
+      "Monde": [[0, 0, "Marqueur "], [0, 1, "Marqueur 6"]],
+      "Europe": [[48.8566, 2.3522, "Paris, France"]],
+      "Amérique du Nord": [[40.7128, -74.0060, "New York, USA"]],
+      "Asie": [[34.0522, -118.2437, "Los Angeles, USA"]]
+    };
+  
+    // Fonction pour changer la carte et afficher les marqueurs
+    function changeMap() {
+      var selectedOption = document.getElementById('region').value;
+      var [lat, lon, zoom, name] = selectedOption.split(',');
+  
+      // Définir la vue de la carte en fonction de la région sélectionnée
+      map.setView([lat, lon], zoom);
+      markers.clearLayers();
+      
+      if (markersData[name]) {
+        // Ajouter les marqueurs correspondants à la carte
+        markersData[name].forEach(function (markerInfo) {
+          var [markerLat, markerLon, markerName] = markerInfo;
+          L.marker([markerLat, markerLon]).addTo(markers).bindPopup(markerName).openPopup();
+        });
+      }
+    }
+  
+    // Chargement initial de la carte
+    changeMap();
+  </script>
 
         <div class="container">
             <div class="pre-section">
@@ -216,21 +260,20 @@
             </div>
         </div>
 
+        
         <div id="name-card" class="row name-card">
             <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
                 <div class="card-content rounded-4 overflow-hidden" id="card-content">
                     <div class="image-card">
-                        <img src="images/formation-1.jpg" alt="">
+                        <img src="https://img.freepik.com/vecteurs-premium/icone-geolocalisation-rouge_74669-526.jpg?size=626&ext=jpg&ga=GA1.1.869340897.1689281166&semt=sph" alt="">
                     </div>
                     <div class="typo-card p-4" id="typo">
-                        <h5>Infrastructures et Cybersécurité</h5>
-                        <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
-                            vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                        <i class="fa-regular fa-clock"></i><span class="date-span fw-bold">23 mars 2023</span>
+                        <h5>Découvrez l'Apple Foundation Program lors de nos journées portes ouvertes à travers la France</h5>
+                        <p></p>
                         <div class="bouton-card">
-                            <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
-                                    class="fa-solid fa-chevron-right i-2" id="i-2"></i>
-                                <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
-                            </button>
+                           
+                              
                         </div>
                     </div>
                 </div>
@@ -238,17 +281,16 @@
             <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
                 <div class="card-content rounded-4 overflow-hidden" id="card-content">
                     <div class="image-card">
-                        <img src="images/formation-1.jpg" alt="">
+                        <img src="https://img.freepik.com/photos-gratuite/femmes-droits-egalite-opportunites-equite-feminisme-concept_53876-125197.jpg?w=826&t=st=1697110675~exp=1697111275~hmac=155578d991d9bc057c335eac5e12d9c158c517f85564090a0fbbdff55acf5a24" alt="">
                     </div>
+                    
                     <div class="typo-card p-4" id="typo">
-                        <h5>Infrastructures et Cybersécurité</h5>
-                        <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
-                            vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                        <i class="fa-regular fa-clock"></i><span class="date-span fw-bold">23 mars 2023</span>
+                        <h5> Simplon obtient 90 points sur 100 à son index égalité professionnelle</h5>
+                        <p></p>
                         <div class="bouton-card">
-                            <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
-                                    class="fa-solid fa-chevron-right i-2" id="i-2"></i>
-                                <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
-                            </button>
+                           
+                            
                         </div>
                     </div>
                 </div>
@@ -256,64 +298,102 @@
             <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
                 <div class="card-content rounded-4 overflow-hidden" id="card-content">
                     <div class="image-card">
-                        <img src="images/formation-1.jpg" alt="">
+                        <img src="../public/blog-img/group.jpg" alt="">
                     </div>
                     <div class="typo-card p-4" id="typo">
-                        <h5>Infrastructures et Cybersécurité</h5>
-                        <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
-                            vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                        <i class="fa-regular fa-clock "></i><span class="date-span fw-bold">23 mars 2023</span>
+                        <h5>
+                        Validez vos acquis de l’expérience avec Simplon !</h5>
+                        <p></p>
                         <div class="bouton-card">
-                            <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
-                                    class="fa-solid fa-chevron-right i-2" id="i-2"></i>
-                                <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
-                            </button>
+                          
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
-                <div class="card-content rounded-4 overflow-hidden" id="card-content">
-                    <div class="image-card">
-                        <img src="images/formation-1.jpg" alt="">
-                    </div>
-                    <div class="typo-card p-4" id="typo">
-                        <h5>Infrastructures et Cybersécurité</h5>
-                        <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
-                            vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
-                        <div class="bouton-card">
-                            <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
-                                    class="fa-solid fa-chevron-right i-2" id="i-2"></i>
-                                <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
-                <div class="card-content rounded-4 overflow-hidden" id="card-content">
-                    <div class="image-card">
-                        <img src="images/formation-1.jpg" alt="">
-                    </div>
-                    <div class="typo-card p-4" id="typo">
-                        <h5>Infrastructures et Cybersécurité</h5>
-                        <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
-                            vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
-                        <div class="bouton-card">
-                            <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
-                                    class="fa-solid fa-chevron-right i-2" id="i-2"></i>
-                                <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <body>
+        </div>
 
+          
+        <div class="row">
+            <div class="col">
+                <div>
+                    <img src="../public/blog-img/carte.jpg" alt="" class="fabrique-img">
+                </div>
+            </div>
+            <div class="col mt-5">
+
+                <h4 class="fw-bold">Simplon au national
+
+                </h4>
+                <p>Sur le territoire national <br>, Simplon.co continue son expansion afin de proposer des formations <br> aux métiers techniques du numérique gratuites, <br> à des personnes en recherche d’évolution ou  <br>éloignées de l’emploi sur tout le territoire national.
+ <br>Des mini-sites régionaux vous permettent d’accéder aux formations et actualités liées à chaque région. <br>
+                    Auvergne-Rhône-Alpes, ​​​​Grand Est, <br> Grand Ouest, Hauts-de-France, Île-de-France, <br> Nouvelle-Aquitaine, Occitanie,  <br>Outre-Mer, Paca. </p>
+            </div>
             
-<div id="the-basics">
-    <input class="typeahead" type="text" placeholder="States of USA">
-  </div>
 
+        </p>
+
+
+
+        <div class="col">
+            <div>
+                <img src="../public/blog-img/carte2.jpg" alt="" class="fabrique-img">
+            </div>
+        </div>
+        <div class="col mt-5">
+
+            <h4 class="fw-bold">Simplon 
+                à l'international
+
+            </h4>
+            <p>
+                Depuis 2014 <br>, Simplon.co forme gratuitement à l'étranger <br> des publics éloignés de la formation et/où de l’emploi aux métiers du numérique en tension, en s’adaptant aux communautés et écosystèmes locaux.
+                Que ce soit en Europe, en Afrique, au Moyen-Orient ou en Asie le réseau Simplon ne connaît pas de frontières et son essaimage à l’international continue de s’étendre grâce à ses partenaires publics, privés et philanthropiques !
+        </div>
+        <div class="btn">
+            <a href="#" class="former-bouton btn mb-5">Découvrir l' offre Simplon Corps </a>
+             <!-- <button>Read more</button> -->
+          </div>
+    </p>
+
+
+
+    <div class="col">
+                <div>
+                    <img src="https://img.freepik.com/photos-gratuite/formateur-expliquant-details-du-projet-au-stagiaire_74855-1665.jpg?size=626&ext=jpg&ga=GA1.1.869340897.1689281166&semt=ais" alt="">
+                </div>
+            </div>
+            <div class="col mt-5">
+                <div class="tite-content-form">
+
+                <h4 >Démystifiez le numérique par les ateliers de mise en pratique #INITIATION
+
+
+                </h4>
+                <p class="para-former">200, c’est le nombre de managers de L’Oréal qui ont suivi une LEX Simplon
+                    LEX, c’est le petit diminutif pour Learning EXpedition, soit 3 jours d’immersion dans l’écosystème Tech. Au programme : <br> 
+                    
+                    démystifier le numérique au sein de notre fablab en mettant les mains dans la Tech (Jour 1) <br> 
+                    
+                    réfléchir aux synergies possibles avec des startups au sein de station F (Jour 2) <br> 
+                    
+                    découvrir des solutions concrètes et innovantes en entreprise et se mettre en action (Jour 3) <br> 
+                    
+                    Une occasion rêvée pour communiquer notre vision d’un numérique inclusif auprès des décideurs de L’Oréal et leur insuffler l’idée que l’innovation peut venir de tout le monde (#intrapreneuriatpourtous).
+                    
+                    </p>
+             </div>
+            </div>
+            
+            <div class="btn">
+                <a href="#" class="former-bouton btn mb-5">Découvrir l' offre Simplon Corps </a>
+                 <!-- <button>Read more</button> -->
+              </div>
+        </p>
+
+        </div>
+
+        
             <!-- section header -->
         
         
