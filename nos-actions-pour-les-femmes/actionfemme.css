@@ -14,7 +14,7 @@ body{
 }
 /* debut css de la banniere */
 .action-banniere{
-    background-image: url(https://img.freepik.com/photos-gratuite/quatre-meilleures-amies-jeunes-femmes-africaines-s-amusant-passant-du-temps-ensemble-empiler-mains-puis-remonter_627829-850.jpg?size=626&ext=jpg&ga=GA1.1.12207566.1692912950&semt=ais);
+    background-image: url(https://img.freepik.com/photos-gratuite/groupe-femmes-affaires-participant-discussion-groupe_53876-26298.jpg?size=626&ext=jpg&ga=GA1.2.12207566.1692912950&semt=ais);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -23,6 +23,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     place-content: center;
+    margin-top: 100px;
 }
 .action-banniere::before{
     content: '';
@@ -45,7 +46,7 @@ body{
     /* font-size: 80px; */
     position: absolute;
     z-index: 2;
-    top: 370px;
+    top: 440px;
     left: 500px;
 }
 .action-titre{
@@ -53,7 +54,7 @@ body{
     font-weight: bold;
     position: absolute;
     z-index: 2;
-    top: 300px;
+    top: 380px;
     text-align: center;
     font-size: 18px;
 }
