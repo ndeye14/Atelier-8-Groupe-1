@@ -1,41 +1,50 @@
 .handi{
-    border: 3px solid #13be2a;
-    background-image: url(../public/image/ha.PNG);
+    /* border: 3px solid #13be2a; */
+    background-image: url(https://t4.ftcdn.net/jpg/06/31/25/67/240_F_631256784_5unB9rVovMUbTzUTk5332aNrxFR7CPMX.jpg);
     padding: 300px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .handicap{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     text-align: center;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 2%;
+    box-sizing: border-box;
     padding: 10px;
+    width: 100%;
+    margin: 0 auto;
 }
-h4{
-    border: 1px solid #000;
-    margin-top: 20%;
+#simplon{
+    /* border: 1px solid #000; */
+    margin: 2%;
     text-align: center;
 }
 .handicap .cap{
     border: 1px solid #000;
-    width: 50%;
+    background-image: url(https://t4.ftcdn.net/jpg/06/03/12/69/240_F_603126923_gMAuHmsGxDhpgW1marpX10s3b2PlHgvB.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 2%;
+    padding: 200px;
 }
- .handicap.cap {
-    width: 50%;
-}
-.cap img{
-    width: 100%;
-}
+ 
+/* .cap {
+    background-image: url(../public/image/hand.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 2%;
+   
+} */
 .handicap .sommaire{
     border: 1px solid #000;
-    /* margin-left: 15%; */
     padding: 0;
-    width: 50%;
+    width: 100%;
 }
 .sommaire p{
-    border: 1px solid #000;
-    width: 40%;
+  margin-right: 5%;
+    /* width: 40%; */
 }
 .chiffre h3{
     text-align: center;
