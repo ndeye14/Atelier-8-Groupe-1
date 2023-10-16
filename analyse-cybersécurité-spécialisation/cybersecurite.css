@@ -379,6 +379,7 @@ body {
     color: var(--base-color);
     text-align: center;
     margin-top: 30px;
+    font-size: 30px;
 }
 .offre-sector {
     text-align: center;

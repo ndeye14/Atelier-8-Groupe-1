@@ -193,7 +193,7 @@
 .alternance-banniere h1{
     color: white;
     font-weight: bold;
-    font-size: 80px;
+    font-size: 50px;
     position: relative;
     z-index: 2;
 }
@@ -233,7 +233,7 @@
 /* --debut css contenu-- */
 .alternance-titre{
     color: var(--rouge);
-    font-size: 20px;
+    font-size: 40px;
     display: flex;
     flex-wrap: wrap;
     place-content: center;
@@ -313,7 +313,7 @@
 }
 .alternance-content-two h3{
     color: var(--rouge);
-    font-size: 30px;
+    font-size: 40px;
     margin: 60px;
 }
 .alternance-content-two{
@@ -343,6 +343,7 @@
     text-align: center;
     color: var(--rouge);
     margin: 60px;
+    font-size: 40px;
 }
 .alternance-content-three-item{
     display: flex;
