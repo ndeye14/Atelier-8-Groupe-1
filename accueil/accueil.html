@@ -90,8 +90,9 @@
                             <li><a class="dropdown-item" href="../infrastructure-cuberscurite/infraCyber.html">Infrastructures et cybersécurité</a></li>
                             <li><a class="dropdown-item" href="../infrastructure-cuberscurite/">Développement d'applications</a></li>
                             <li><a class="dropdown-item" href="../fondamentaux-numerique/fondamentaux-num.html">Fondamentaux numériques</a></li>
+                            <li><a class="dropdown-item" href="../agile/agile.html">Gestion de projet agile</a></li>
                             <li><a class="dropdown-item" href="../cloud-devops/cloud.html">Cloud & Devops</a></li>
-                            <li><a class="dropdown-item" href="../Data-IA/">Data & intelligence artificielle</a></li>
+                            <li><a class="dropdown-item" href="../Data-IA/dataIa.html">Data & intelligence artificielle</a></li>
                             <li><a class="dropdown-item" href="../metavers/metaverse.html">Métavers & XR</a></li>
                             <li><a class="dropdown-item" href="../blockchain/blockchain.html">Blockchain</a></li>
                         </ul>
@@ -689,7 +690,7 @@
                                         Pages
                                     </h4>
                                     <ul class="foot-ul">
-                                        <li><a href="../devenir-formateur/formateur.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                        <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                                     fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
                                                     <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                                 </svg>Devenir formateur</a></li>
@@ -697,7 +698,7 @@
                                                         fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
                                                         <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                                     </svg>Rejoindre notre equipe</a></li>
-                                        <li><a href=""><a href="../blog/blog.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                        <li><a href=""><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                                         fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
                                                         <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                                     </svg>Blog</a></li>
@@ -723,7 +724,7 @@
                                                         fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
                                                         <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                                     </svg>Accessibilite</a></li>
-                                        <li><a href=""><a href="../mentions-légales/metionlegale.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                        <li><a href=""><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                                         fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
                                                         <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                                     </svg>Mention legales</a></li>
@@ -767,5 +768,56 @@
     <!-- section footer -->
     <!-- end footer -->
     <script src="carte-1.js"></script>
+    <!-- progress -->
+    <!-- à mettre avant le header juste apres le body juste comme cela -->
+    <div id="progress">
+        <span id="progressValue"><i class="bi bi-arrow-up-square-fill"></i></span>
+    </div>
+    <!-- <header style="height: 70vh; background-color: #C30033;"></header> -->
+    <main style="height: 100vh; background-color: #F6F6F6;"></main>
+    <!-- <footer style="height: 50vh; background-color: beige;"></footer> -->
+    <script>
+        let calcScrollValue = () => {
+            let scrollProgress = document.getElementById('progress');
+            let scrolProgressValue = document.getElementById('progressValue');
+
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollValue = Math.round((pos * 100) / calcHeight)
+            if (pos > 10) {
+                scrollProgress.style.display = 'grid';
+            } else {
+                scrollProgress.style.display = 'none';
+            }
+
+            scrollProgress.addEventListener('click', () => {
+                document.documentElement.scrollTop = 0;
+            })
+
+            scrollProgress.style.background = `conic-gradient( #C30033 ${scrollValue}%, white ${scrollValue}%)`;
+        }
+        // Ajouter un seul gestionnaire d'événements
+        window.addEventListener('scroll', () => {
+            // navBarFixed();
+            calcScrollValue();
+        });
+
+        // Exécutez les fonctions une fois au chargement de la page
+        window.addEventListener('load', () => {
+            // navBarFixed();
+            calcScrollValue();
+        });
+
+        let menuTogler = document.querySelector('.menuTogler');
+        let menuToglerIcon = document.querySelector('.menuTogler i');
+        let dropDownMenu = document.querySelector('.dropDownMenu');
+
+        menuTogler.onclick = function () {
+            dropDownMenu.classList.toggle('open');
+            let isOpen = dropDownMenu.classList.contains('open');
+
+            menuToglerIcon.classList = isOpen ? 'bi bi-x ' : 'bi bi-list ';
+        }
+    </script>
 </body>
 </html>
