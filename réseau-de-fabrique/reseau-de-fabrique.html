@@ -17,6 +17,8 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Fin favicon -->
@@ -75,11 +77,11 @@
                             A Propos
                         </button>
                         <ul class="sous-menu dropdown-menu">
-                            <li><a class="dropdown-item" href="../qui-sommes-nous/qsnous.html">Qui sommes nous ?</a></li>
-                            <li><a class="dropdown-item" href="../pedagogie/pedagogie.html">Notre pédagogie</a></li>
-                            <li><a class="dropdown-item" href="../">Notre réseau de fabriques</a></li>
-                            <li><a class="dropdown-item" href="../numerique-inclusif/numeriqueInclusif.html">Nos actions pour un numérique inclusif</a></li>
-                            <li><a class="dropdown-item" href="../anti-faq/antifaq.html">Anti-FAQ</a></li>
+                            <li><a class="dropdown-item" href="#">Qui sommes nous ?</a></li>
+                            <li><a class="dropdown-item" href="#">Notre pédagogie</a></li>
+                            <li><a class="dropdown-item" href="#">Notre réseau de fabriques</a></li>
+                            <li><a class="dropdown-item" href="#">Nos actions pour un numérique inclusif</a></li>
+                            <li><a class="dropdown-item" href="#">Anti-FAQ</a></li>
                         </ul>
                     </div>
                     <div class="dropdown me-1">
@@ -88,13 +90,13 @@
                             Nos Formations
                         </button>
                         <ul class="sous-menu dropdown-menu">
-                            <li><a class="dropdown-item" href="../infrastructure-cuberscurite/infraCyber.html">Infrastructures et cybersécurité</a></li>
+                            <li><a class="dropdown-item" href="#">Infrastructures et cybersécurité</a></li>
                             <li><a class="dropdown-item" href="#">Développement d'applications</a></li>
-                            <li><a class="dropdown-item" href="../fondamentaux-numerique/fondamentaux-num.html">Fondamentaux numériques</a></li>
-                            <li><a class="dropdown-item" href="../cloud-devops/cloud.html">Cloud & Devops</a></li>
-                            <li><a class="dropdown-item" href="../Data-IA/dataIa.html">Data & intelligence artificielle</a></li>
-                            <li><a class="dropdown-item" href="../metavers/metaverse.html">Métavers & XR</a></li>
-                            <li><a class="dropdown-item" href="../blockchain/blockchain.html">Blockchain</a></li>
+                            <li><a class="dropdown-item" href="#">Fondamentaux numériques</a></li>
+                            <li><a class="dropdown-item" href="#">Cloud & Devops</a></li>
+                            <li><a class="dropdown-item" href="#">Data & intelligence artificielle</a></li>
+                            <li><a class="dropdown-item" href="#">Métavers & XR</a></li>
+                            <li><a class="dropdown-item" href="#">Blockchain</a></li>
                         </ul>
                     </div>
                     <div class="dropdown me-1">
@@ -103,7 +105,7 @@
                             Alternances
                         </button>
                         <ul class="sous-menu dropdown-menu">
-                            <li><a class="dropdown-item" href="../formation-alternance/alternance.html">Faire ma formation en alternance</a></li>
+                            <li><a class="dropdown-item" href="#">Faire ma formation en alternance</a></li>
                             <li><a class="dropdown-item" href="#">Recruter en alternance</a></li>
                         </ul>
                     </div>
@@ -113,7 +115,7 @@
                             Candidats
                         </button>
                         <ul class="sous-menu dropdown-menu">
-                            <li><a class="dropdown-item" href="../nos-actions-pour-les-femmes/actionfemme.html">Nos actions pour les femmes</a></li>
+                            <li><a class="dropdown-item" href="#">Nos actions pour les femmes</a></li>
                             <li><a class="dropdown-item" href="#">Personnes en situation de handicap</a></li>
                             <li><a class="dropdown-item" href="#">Nos actions pour les refugés étrangers</a></li>
                         </ul>
@@ -169,38 +171,80 @@
         </script>
 
     </header>
-    <section id="accueil">
+    <main id="accueil">
         <div class="banner">
-            <div id="carouselExampleAutoplaying" class="banner-carrousel carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/formation-2.jpg" class="d-block w-100" alt="...">
-                        <div class="desc-accueil carousel-caption d-none d-md-block">
-                            <h5>Simplon, formations numériques</h5>
-                            <p>Simplon, l’école qui forme aux métiers du numérique dans toute la France et à l’international.
-                            ​​​​​​​Rejoignez un réseau de plus de 25 000 apprenants et apprenantes.
-                            ​​​​​​​Vous souhaitez vous aussi intégrer un parcours de formation Simplon ou être conseillé-e dans votre parcours ?</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/formation-2.jpg" class="d-block w-100" alt="...">
-                    </div>
+            <div class="content-banner">
+            
+            
+                
+               
+                <style>
+                  #map {
+                    height: 400px;
+                  }
+                </style>
+            
+              
+              <!-- Sélection de la région à afficher sur la carte -->
+              <label for="region">Choisissez une région : </label>
+              <select id="region" onchange="changeMap()">
+                <option value="0,0,2,Monde">Monde</option>
+                <option value="48.8566,2.3522,6,Europe">Europe (Paris, France)</option>
+                <option value="40.7128,-74.0060,6,Amérique du Nord">Amérique du Nord (New York, USA)</option>
+                <option value="34.0522,-118.2437,6,Asie">Asie (Los Angeles, USA)</option>
+              </select>
+              
+              <!-- Conteneur pour la carte Leaflet -->
+              <div id="map"></div>
+                <div class="chemin">
+                    <button>Accueil / Nos formations</button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
-    
-        
-        </head>
+   
+  
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    // Création de la carte Leaflet
+    var map = L.map('map').setView([0, 0], 2);
+  
+    // Ajout de la couche de tuiles OpenStreetMap à la carte
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+  
+    // Groupe de calques pour les marqueurs
+    var markers = L.layerGroup().addTo(map);
+  
+    // Données des marqueurs pour chaque région
+    var markersData = {
+      "Monde": [[0, 0, "Marqueur "], [0, 1, "Marqueur 6"]],
+      "Europe": [[48.8566, 2.3522, "Paris, France"]],
+      "Amérique du Nord": [[40.7128, -74.0060, "New York, USA"]],
+      "Asie": [[34.0522, -118.2437, "Los Angeles, USA"]]
+    };
+  
+    // Fonction pour changer la carte et afficher les marqueurs
+    function changeMap() {
+      var selectedOption = document.getElementById('region').value;
+      var [lat, lon, zoom, name] = selectedOption.split(',');
+  
+      // Définir la vue de la carte en fonction de la région sélectionnée
+      map.setView([lat, lon], zoom);
+      markers.clearLayers();
+      
+      if (markersData[name]) {
+        // Ajouter les marqueurs correspondants à la carte
+        markersData[name].forEach(function (markerInfo) {
+          var [markerLat, markerLon, markerName] = markerInfo;
+          L.marker([markerLat, markerLon]).addTo(markers).bindPopup(markerName).openPopup();
+        });
+      }
+    }
+  
+    // Chargement initial de la carte
+    changeMap();
+  </script>
 
         <div class="container">
             <div class="pre-section">
@@ -216,21 +260,21 @@
             </div>
         </div>
 
+        
         <div id="name-card" class="row name-card">
             <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
                 <div class="card-content rounded-4 overflow-hidden" id="card-content">
                     <div class="image-card">
-                        <img src="images/formation-1.jpg" alt="">
+                        <img src="../public/blog-img/carte3 (2).jpg" alt="">
                     </div>
                     <div class="typo-card p-4" id="typo">
-                        <h5>Infrastructures et Cybersécurité</h5>
-                        <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
-                            vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                        
+                        <h5> Becode Anvers</h5>
+                     
+                        <p></p>
                         <div class="bouton-card">
-                            <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
-                                    class="fa-solid fa-chevron-right i-2" id="i-2"></i>
-                                <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
-                            </button>
+                           
+                              
                         </div>
                     </div>
                 </div>
@@ -238,17 +282,16 @@
             <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
                 <div class="card-content rounded-4 overflow-hidden" id="card-content">
                     <div class="image-card">
-                        <img src="images/formation-1.jpg" alt="">
+                        <img src="../public/blog-img/carte3 (2).jpg" alt="">
                     </div>
+                    
                     <div class="typo-card p-4" id="typo">
-                        <h5>Infrastructures et Cybersécurité</h5>
-                        <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
-                            vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                        
+                        <h5> Becode Anvers</h5>
+                        <p></p>
                         <div class="bouton-card">
-                            <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
-                                    class="fa-solid fa-chevron-right i-2" id="i-2"></i>
-                                <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
-                            </button>
+                           
+                            
                         </div>
                     </div>
                 </div>
@@ -256,64 +299,79 @@
             <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
                 <div class="card-content rounded-4 overflow-hidden" id="card-content">
                     <div class="image-card">
-                        <img src="images/formation-1.jpg" alt="">
+                        <img src="../public/blog-img/carte3 (2).jpg" alt="">
                     </div>
                     <div class="typo-card p-4" id="typo">
-                        <h5>Infrastructures et Cybersécurité</h5>
-                        <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
-                            vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
+                       
+                    
+                     
+                            <h5> Becode Anvers</h5>
+                            <p></p>
+                        <p></p>
                         <div class="bouton-card">
-                            <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
-                                    class="fa-solid fa-chevron-right i-2" id="i-2"></i>
-                                <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
-                            </button>
+                          
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
-                <div class="card-content rounded-4 overflow-hidden" id="card-content">
-                    <div class="image-card">
-                        <img src="images/formation-1.jpg" alt="">
-                    </div>
-                    <div class="typo-card p-4" id="typo">
-                        <h5>Infrastructures et Cybersécurité</h5>
-                        <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
-                            vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
-                        <div class="bouton-card">
-                            <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
-                                    class="fa-solid fa-chevron-right i-2" id="i-2"></i>
-                                <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-items col-12 col-lg-4 col-md-6 col-sm-12 p-3" id="card-items">
-                <div class="card-content rounded-4 overflow-hidden" id="card-content">
-                    <div class="image-card">
-                        <img src="images/formation-1.jpg" alt="">
-                    </div>
-                    <div class="typo-card p-4" id="typo">
-                        <h5>Infrastructures et Cybersécurité</h5>
-                        <p>La cybersécurité est un enjeu stratégique pour toute entreprise en transition numérique.
-                            vous souhaitez rejoindre les rangs des métiers de la cybersécurité ?</p>
-                        <div class="bouton-card">
-                            <button id="btn-card" class="btn-card"><i class="fa-solid fa-minus i-1" id="i-1"></i><i
-                                    class="fa-solid fa-chevron-right i-2" id="i-2"></i>
-                                <span id="cta" class="cta">DECOUVRIR NOS FORMATIONS</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <body>
+        </div>
 
+          
+        <div class="row">
+            <div class="col">
+                <div>
+                    <img src="../public/blog-img/carte.jpg" alt="" class="fabrique-img">
+                </div>
+            </div>
+            <div class="col mt-5">
+
+                <h4 class="fw-bold">Simplon au national
+
+                </h4>
+                <p>Sur le territoire national <br>, Simplon.co continue son expansion afin de proposer des formations <br> aux métiers techniques du numérique gratuites, <br> à des personnes en recherche d’évolution ou  <br>éloignées de l’emploi sur tout le territoire national.
+ <br>Des mini-sites régionaux vous permettent d’accéder aux formations et actualités liées à chaque région. <br>
+                    Auvergne-Rhône-Alpes, ​​​​Grand Est, <br> Grand Ouest, Hauts-de-France, Île-de-France, <br> Nouvelle-Aquitaine, Occitanie,  <br>Outre-Mer, Paca. </p>
+            </div>
             
-<div id="the-basics">
-    <input class="typeahead" type="text" placeholder="States of USA">
-  </div>
 
+        </p>
+
+
+
+        <div class="col">
+            <div>
+                <img src="../public/blog-img/carte2.jpg" alt="" class="fabrique-img">
+            </div>
+        </div>
+        <div class="col mt-5">
+
+            <h4 class="fw-bold">Simplon 
+                à l'international
+
+            </h4>
+            <p>
+                Depuis 2014 <br>, Simplon.co forme gratuitement à l'étranger <br> des publics éloignés de la formation et/où de l’emploi aux métiers du numérique en tension, en s’adaptant aux communautés et écosystèmes locaux.
+              
+                Que ce soit en Europe,  <br>en Afrique, au Moyen-Orient ou en Asie le réseau Simplon ne connaît pas  <br> de frontières et son essaimage à l’international  br 
+                continue de s’étendre grâce à ses partenaires publics, privés et philanthropiques !
+
+                <h4 class="fw-bold">Vous souhaitez ouvrir une Fabrique ?</h4>
+                <p>
+                    
+Suivez les étapes ! <br>
+
+Le Réseau des Fabriques est constitué d’organisations partenaires très différentes <br> (organismes de formation, entreprises, associations, fondations, etc) qui ont rejoint  <br>la communauté et bénéficient ainsi de la méthodologie,<br> des référentiels et de la pédagogie Simplon.co !
+                </p>
+        </div>
+
+
+    </p>
+
+
+
+    
+
+        
             <!-- section header -->
         
         
@@ -360,7 +418,7 @@
                                             Pages</h4>
                                             
                                         <ul>
-                                            <li><a href="../devenir-formateur/formateur.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot"
+                                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot"
                                                 viewBox="0 0 16 16">
                                                 <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                             </svg>Devenir formateur</a></li>
@@ -368,7 +426,7 @@
                                                     viewBox="0 0 16 16">
                                                     <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                                 </svg>Rejoindre notre equipe</a></li>
-                                            <li><a href=""><a href="../blog/blog.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot"
+                                            <li><a href=""><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot"
                                                     viewBox="0 0 16 16">
                                                     <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                                 </svg>Blog</a></li>
@@ -394,7 +452,7 @@
                                                     viewBox="0 0 16 16">
                                                     <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                                 </svg>Accessibilite</a></li>
-                                            <li><a href=""><a href="../mentions-légales/metionlegale.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot"
+                                            <li><a href=""><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dot"
                                                     viewBox="0 0 16 16">
                                                     <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                                                 </svg>Mention legales</a></li>

@@ -278,7 +278,7 @@ body {
 
 #accueil {
     position: relative;
-    top: 100px;
+    top: 120px;
 }
 .banner-carrousel {
     overflow: hidden;
@@ -359,6 +359,9 @@ body {
 .section-metiers {
     margin: 0 auto;
     padding: 0 13%;
+}
+.fabrique-img {
+    margin-left: 90px ;
 }
 
 

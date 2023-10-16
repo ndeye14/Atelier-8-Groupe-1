@@ -303,9 +303,10 @@ body {
 }
 .desc-accueil {
     position: absolute;
+    border: 2px solid black;
     height: max-content;
     z-index: 200;
-    top:30%;
+    /* top: 30%; */
     color: white;
 }
 .name-card {
