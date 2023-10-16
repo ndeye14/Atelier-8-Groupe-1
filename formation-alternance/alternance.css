@@ -293,9 +293,6 @@
 .alternance-content-right-items p{
     padding-left: 17px;
 }
-.alternance-content-right-items p{
-    justify-content: justify;
-}
 .alternance-titre-right{
     text-align: center;
     font-size: 20px;
@@ -325,6 +322,10 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+#bdy-alternance i{
+    padding-right: 20px;
+    /* color: #F6F6F6; */
+}
 .alternance-content-two-badge{
     position: absolute;
     background-color: var(--bleu);
@@ -335,6 +336,11 @@
     top: 30px;
 }
 .btn{
+    background-color: var(--rouge);
+    border: none;
+    font-weight: bold;
+}
+.btn:hover{
     background-color: var(--rouge);
     border: none;
     font-weight: bold;
